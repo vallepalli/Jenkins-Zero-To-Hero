@@ -20,7 +20,7 @@ pipeline {
     stage('Checkout') {
             steps {
                 // Checkout the code from the repository
-                git 'https://github.com/vallepalli/Jenkins-Zero-To-Hero'
+                git 'https://github.com/vallepalli/Jenkins-Zero-To-Hero/blob/main/multi-stage-multi-agent'
             }
         }
     stage('Build') {
