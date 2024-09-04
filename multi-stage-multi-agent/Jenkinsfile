@@ -20,7 +20,11 @@ pipeline {
     stage('Checkout') {
             steps {
                 // Checkout the code from the repository
-                git 'https://github.com/vallepalli/Jenkins-Zero-To-Hero.git'
+                git branch: 'main', url: 'https://github.com/vallepalli/Jenkins-Zero-To-Hero.git'
+              script {
+                    sh 'git checkout main-branch -- multi-stage-multi-agent
+/HelloWorld.java'
+                }
             }
         }
     stage('Build') {
