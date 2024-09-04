@@ -17,5 +17,23 @@ pipeline {
         sh 'node --version'
       }
     }
+    stage('Checkout') {
+            steps {
+                // Checkout the code from the repository
+                git 'https://github.com/vallepalli/Jenkins-Zero-To-Hero'
+            }
+        }
+    stage('Build') {
+            steps {
+                // Compile the Java code
+                sh 'javac HelloWorld.java'
+            }
+        }
+    stage('Run') {
+            steps {
+                // Run the Java application
+                sh 'java HelloWorld'
+            }
+        }
   }
 }
