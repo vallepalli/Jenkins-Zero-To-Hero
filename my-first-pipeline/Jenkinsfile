@@ -8,13 +8,11 @@ pipeline {
         sh 'node --version'
       }
     }
-    stages {
     stage('Test2') {
       steps {
         sh 'node --version'
       }
     }
-    stages {
     stage('Test3') {
       steps {
         sh 'node --version'
